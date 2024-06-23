@@ -1,0 +1,244 @@
+<!
+
+
+Project Group ID : MET_WD_01.01_04
+  Batch No. : Y1.S2.WD.IT
+  Member ID : IT22337108
+  Member Name : Pradhap Ramasamy
+  Contact No. :  0774572488
+  Address : 92/31a st mary's lane mattakuliya colombo-15
+  Functions Implemented : after login home page;
+                  
+>    
+<html>
+<head>
+<title>
+Hotel Tour
+</title>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body>
+
+
+<a class="active" href="#FAQ"><img src="faq.png" class="faq"></a>
+<header style="background-color: lightgray;">
+
+<div class="date">
+<center>
+<h1 id="day"></h1>
+<h1 id="month"></h1>
+<h1 id="year"></h1>
+
+<form action="/action_page.php" class="search">
+      <input type="text" placeholder="Search.." name="search" class="search">
+    </form>
+</center>
+<script>
+  var dayElement = document.getElementById("day");
+  var monthElement = document.getElementById("month");
+  var yearElement = document.getElementById("year");
+
+  var currentDate = new Date();
+
+  var day = currentDate.getDate();
+  var month = currentDate.toLocaleString("en-US", { month: "long" });
+  var year = currentDate.getFullYear();
+
+  dayElement.innerHTML = day;
+  monthElement.innerHTML = month;
+  yearElement.innerHTML = year;
+</script>
+</div>
+
+<div class="logo">
+<img class="img" src="Hotel-logo.png" width="400px" height="350px">
+</div>
+
+<div class="language" >
+<select>
+  <option value="English">English</option>
+  <option value="Italic">Italic</option>
+  <option value="Dutch">Dutch</option>
+  <option value="Franch">Franch</option>
+</select>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+</header> 
+<hr>
+
+<table  class=abar>
+<tr>
+<th class=ath ><a class="active" href="Home.html">Home</a></th>
+<th class=ath><a class="active" href="#OverView">OverView</a></th>
+<th class=ath><a class="active" href="#Contact Us">Contact Us</a></th>
+<th class=ath><a class="active" href="#Location">Location</a></th>
+<th class=ath><a class="active" href="Gallery.html">Gallery</a></th>
+</tr>
+</table>
+
+<table  class=bbar>
+<tr>
+<th class="bth bthpage2"><a class="active" href="#LOGIN">UserName</a></th>
+</tr>
+</table>
+<hr>
+
+    <img src="Pic (1).jpg" class="mySlides">
+	<img src="Pic (2).jpg" class="mySlides">
+	<img src="Pic (3).jpg" class="mySlides">
+	<img src="Pic (4).jpg" class="mySlides">
+	<img src="Pic (5).jpg" class="mySlides">
+	<img src="Pic (6).jpg" class="mySlides">
+	<img src="Pic (7).jpg" class="mySlides">
+
+
+    
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+
+  <form action="checkavailabilitypage.php" method="post" >
+  
+  
+<fieldset class="checkavab">
+<table class="contenttable">
+  <tr>
+  
+    <td rowspan="2" class="contenttd" style="background-color:lightgray;font-size:20px;">Hotel Tour</td>
+    <td  class="contenttd">Check-In</td>
+      <td  class="contenttd">Check-Out</td>
+    <td rowspan="2" class="contenttd">
+	<br>
+	No Of Room <br> <input type="number" id="roomno" value="2" name="rooms" class="contentinput" >
+<br>
+No Of Guest <br> <input type="number" id="guestno" value="2" name="guest" class="contentinput">
+<br>
+	</td>
+  </tr>
+  <tr>
+    <td class="contenttd">
+	
+  <input type="date" id="Date" name="checkin" class="contentdate">
+	</td>
+    <td class="contenttd">
+	
+  <input type="date" id="Date" name="checkout" class="contentdate">
+</td>
+  </tr>
+</table>
+</fieldset>
+<br>
+<button type="submit"  class="button button2">Check Availability</button>
+<br>
+
+
+</form>
+
+
+
+<div id="time"></div>
+
+<script>
+var timeDisplay = document.getElementById("time");
+function refreshTime() {
+  var timeString = new Date().toLocaleTimeString("en-US", {timeZone: "asia/colombo"});
+  timeDisplay.innerHTML = timeString;
+}
+setInterval(refreshTime, 1000);
+</script>
+
+<div id="temperature"></div>
+
+  <script>
+   
+    var temperature = Math.floor(Math.random() * 61) - 20;
+
+
+    var temperatureElement = document.getElementById("temperature");
+    temperatureElement.innerHTML = temperature + "°C";
+  </script>
+  <br>
+  <br>
+  <fieldset style="border: 0;">
+<h1><u><center>Memories With Us</center></u></h1>
+<div class=memoryfieldset>
+"Nothing makes you feel better than when you get into a hotel bed,<br> and the sheets feel so good. Why shouldn't you wake up like that every day?<br> Spend money on your mattress and bedding because these things make a difference on your sleep <br>and, ultimately, your happiness."
+</div>
+</fieldset>
+<div class="scroll-container">
+<img src="Pic (11).jpg" class="memory">
+<img src="Pic (7).jpg" class="memory">
+<img src="Pic (3).jpg" class="memory">
+<img src="Pic (4).jpg" class="memory">
+<img src="Pic (5).jpg" class="memory">
+<img src="Pic (6).jpg" class="memory">
+<img src="Pic (7).jpg" class="memory">
+<img src="Pic (8).jpg" class="memory">
+<img src="Pic (9).jpg" class="memory">
+<img src="Pic (10).jpg" class="memory">
+<img src="Pic (11).jpg" class="memory">
+</div>
+
+<hr>
+<footer>
+
+<table class="fcol1">
+<tr><th><u>About</u></th></tr>
+<tr><td>About Hotel History</td></tr>
+<tr><td>Gallery</td></tr>
+<tr><td>Terms and Conditions</td></tr>
+<tr><td>Privacy Statement</td></tr>
+<tr><td>Contact Us</td></tr>
+</table >
+<table class="fcol2">
+<tr><th><u>Follow Us</u></th></tr>
+<tr><td>Facebook  </td></tr>
+<tr><td>Instagram</td></tr>
+<tr><td>Twiter</td></tr>
+<tr><td>linkIn</td></tr>
+<tr><td><button onclick="" class="button button2">Subscribers</button></td></tr>
+</table>
+<table class="fcol3">
+<tr><th><u>Application Download</u></th></tr>
+<tr><td>IOS</td></tr>
+<tr><td>Android</td></tr>
+
+</table>
+</footer>
+
+</html>

@@ -1,0 +1,148 @@
+<!
+
+
+Project Group ID : MET_WD_01.01_04
+  Batch No. : Y1.S2.WD.IT
+  Member ID : IT22337108
+  Member Name : Pradhap Ramasamy
+  Contact No. :  0774572488
+  Address : 92/31a st mary's lane mattakuliya colombo-15
+  Functions Implemented : Complete Payment display Sucessfully done message
+                  
+>    
+<html>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+
+</head>
+
+<style>
+</style>
+<body>
+
+
+
+<a class="active" href="#FAQ"><img src="faq.png" class="faq"></a>
+<header style="background-color: lightgray;">
+
+<div class="date">
+<center>
+<h1 id="day"></h1>
+<h1 id="month"></h1>
+<h1 id="year"></h1>
+
+<form action="/action_page.php" class="search">
+      <input type="text" placeholder="Search.." name="search" class="search">
+    </form>
+</center>
+<script>
+  var dayElement = document.getElementById("day");
+  var monthElement = document.getElementById("month");
+  var yearElement = document.getElementById("year");
+
+  var currentDate = new Date();
+
+  var day = currentDate.getDate();
+  var month = currentDate.toLocaleString("en-US", { month: "long" });
+  var year = currentDate.getFullYear();
+
+  dayElement.innerHTML = day;
+  monthElement.innerHTML = month;
+  yearElement.innerHTML = year;
+</script>
+</div>
+
+<div class="logo">
+<img class="img" src="Hotel-logo.png" width="400px" height="350px">
+</div>
+
+<div class="language" >
+<select>
+  <option value="English">English</option>
+  <option value="Italic">Italic</option>
+  <option value="Dutch">Dutch</option>
+  <option value="Franch">Franch</option>
+</select>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+</header> 
+<hr>
+
+<table  class=abar>
+<tr>
+<th class=ath ><a class="active" href="Home.html">Home</a></th>
+<th class=ath><a class="active" href="#OverView">OverView</a></th>
+<th class=ath><a class="active" href="#Contact Us">Contact Us</a></th>
+<th class=ath><a class="active" href="#Location">Location</a></th>
+<th class=ath><a class="active" href="#Gallery">Gallery</a></th>
+</tr>
+</table>
+
+<table  class=bbar>
+<tr>
+<th class="bth bthpage2"><a class="active" href="#LOGIN">UserName</a></th>
+</tr>
+</table>
+<hr>
+
+
+
+
+<div class="progressbar-wrapper">
+      <ul class="progressbar">
+          <li >Confirmation</li>
+          <li >Payment</li>
+          <li class="active">Reservation Completed</li>
+      </ul>
+	  
+	  </div>
+	  <br>
+	  <br>
+	  <br>
+	  <br>
+	    <br>
+	  <br>
+	  <br>
+	  <br>
+	  <center>
+	  <h1>Sucessfully Done..! </h1>
+	  <a href="Home.html">
+	  <button onclick="" class="button button2" >Finished</button>
+	  </a>
+	  </center>
+	  
+	  
+	  
+	  
+	  	  <hr>
+<footer >
+
+<table class="fcol1">
+<tr><th><u>About</u></th></tr>
+<tr><td>About Hotel History</td></tr>
+<tr><td>Gallery</td></tr>
+<tr><td>Terms and Conditions</td></tr>
+<tr><td>Privacy Statement</td></tr>
+<tr><td>Contact Us</td></tr>
+</table >
+<table class="fcol2">
+<tr><th><u>Follow Us</u></th></tr>
+<tr><td>Facebook  </td></tr>
+<tr><td>Instagram</td></tr>
+<tr><td>Twiter</td></tr>
+<tr><td>linkIn</td></tr>
+<tr><td><button onclick="" class="button button2">Subscribers</button></td></tr>
+</table>
+<table class="fcol3">
+<tr><th><u>Application Download</u></th></tr>
+<tr><td>IOS</td></tr>
+<tr><td>Android</td></tr>
+</table>
+</footer>
+
+</body>
+</html>
+  
+</body>
+
+</html>
